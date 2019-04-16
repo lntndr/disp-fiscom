@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt]{book}
+
+%%%%% Caricamento pacchetti e macro 
+
+% Codifica input output
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Accorgimenti tipografici
+\usepackage{ebgaramond,newtxmath,ebgaramond-maths}
+\renewcommand*\sfdefault{phv}
+\usepackage{sectsty} \allsectionsfont{\normalfont\sffamily}
+\usepackage{microtype}
+
+% Correzioni per l'italiano
+\usepackage[italian]{babel}
+\usepackage{indentfirst}
+
+% Nel caso servisse aggiungere listings o xcolor, metterlo QUI
+
+% Matlab
+\usepackage{matlab-prettifier}
+\lstset{
+  style              = Matlab-editor,
+  basicstyle         = \mlttfamily\footnotesize,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+\usepackage{lipsum}
+
+% Gestione cartelle esterne
+
+\usepackage {import}
+
+% Comandi extra
+
+%% Valore assoluto
+\newcommand{\abs}[1]{\left|#1\right|}
+
+%% Derivata parziale
+
+\makeatletter
+  \DeclareSymbolFont{ntxletters}{OML}{ntxmi}{m}{it}
+  \SetSymbolFont{ntxletters}{bold}{OML}{ntxmi}{b}{it}
+  \re@DeclareMathSymbol{\partial}{\mathord}{ntxletters}{"40}
+  
+%%%%% Fine caricamento pacchetti e macro
+
+\title{Dispense di Fisica Computazionale}
+\author{Andrea Lanterna}
+\date{April 2019}
+
+\begin{document}
+
+\maketitle
+
+	\frontmatter
+		\maketitle
+		\tableofcontents
+	\mainmatter
+		\part{Teoria}
+		    \chapter{Lorem ipsum}
+		        \section{Piru Piru}
+    		        \lipsum
+    		        \lstinputlisting{moler_6_19.m}
+    		        \lipsum
+		\part{Applicazioni}
+	\backmatter
+	    \listoffigures
+        \listoftables
+        
+
+\end{document}
